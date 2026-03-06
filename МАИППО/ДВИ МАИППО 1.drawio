@@ -10,16 +10,16 @@
         <mxCell id="s5SavuSoZi5YxLUXbpF--2" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Управлять отслеживанием" vertex="1">
           <mxGeometry height="80" width="120" x="285" y="460" as="geometry" />
         </mxCell>
-        <mxCell id="s5SavuSoZi5YxLUXbpF--3" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Опросить устройства" vertex="1">
+        <mxCell id="s5SavuSoZi5YxLUXbpF--3" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Обновить&amp;nbsp;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(0, 0, 0), rgb(255, 255, 255));&quot;&gt;сведения о состоянии устройств&lt;/span&gt;" vertex="1">
           <mxGeometry height="80" width="120" x="150" y="505" as="geometry" />
         </mxCell>
-        <mxCell id="s5SavuSoZi5YxLUXbpF--4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Опросить все устройства" vertex="1">
+        <mxCell id="s5SavuSoZi5YxLUXbpF--4" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Обновить сведения по всем устройствам" vertex="1">
           <mxGeometry height="80" width="120" x="20" y="420" as="geometry" />
         </mxCell>
-        <mxCell id="s5SavuSoZi5YxLUXbpF--5" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Опросить конкретное устройство" vertex="1">
+        <mxCell id="s5SavuSoZi5YxLUXbpF--5" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Обновить сведения по конкретному устройству" vertex="1">
           <mxGeometry height="80" width="120" x="150" y="390" as="geometry" />
         </mxCell>
-        <mxCell id="s5SavuSoZi5YxLUXbpF--6" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Снять метрики с устройства" vertex="1">
+        <mxCell id="s5SavuSoZi5YxLUXbpF--6" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Собрать метрики с устройства" vertex="1">
           <mxGeometry height="80" width="120" x="414" y="505" as="geometry" />
         </mxCell>
         <mxCell id="s5SavuSoZi5YxLUXbpF--7" parent="1" style="ellipse;whiteSpace=wrap;html=1;" value="Просмотреть отчёт программы" vertex="1">
