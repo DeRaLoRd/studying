@@ -1,0 +1,44 @@
+@startuml
+actor Оператор as user
+boundary "Веб-интерфейс" as ui
+participant "Сервер" as server
+database "База данных" as db
+
+user++
+user -> ui: Запрос на отчёт
+ui++
+ui --> user: Окно запроса отчёта
+user -> ui: Ввод данных
+ui -> server: Запрос отчёта за отчётный период
+server++
+
+loop Пока отчёт не составлен
+  server -> db: Запрос информации о неполадках
+  db++
+  db --> server: Ответ на запрос
+  server -> server: Формирование отчёта
+end loop
+
+server -> db: Логировать получение отчёта
+db --> server: Запись сохранена
+db--
+
+create participant Отчёт as report
+server -> report: Создать
+
+server --> ui: Отчёт в машиночитаемом виде
+ui --> user: Отчёт в человекочитаемом виде
+
+opt Экспорт отчёта
+  user -> ui: Команда экспорта
+  ui -> server: Команда экспорта
+  server -> server: Преобразование отчёта в нужный формат
+  server --> ui: Файл отчёта
+  server--
+  ui --> user: Отчёт в необходимом формате
+  ui--
+end opt
+
+user--
+
+@enduml

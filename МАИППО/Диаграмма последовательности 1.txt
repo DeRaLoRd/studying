@@ -1,0 +1,57 @@
+//www.plantuml.com/plantuml/png/fPNFRjD04CRl-nIZdk3WF012gA_Yn3vO2caLEv6uDKa3hL8LjQe4uX1KyG9EgC6an7c5cJVYszb6pf-DMea3Ysj_yzjlljbLZjCix6QzzsqJjhAJBl6KLrp86USov4hEA4ofbyPTqppfTQAm-u6E-9OBdWLSyX8QQEKSB_x8u4Z5YJa5CMabfs4dW_fUSNExgW2mFdXHc8NDC8sXkE6SVtDE_8279QWJ6QiqQcwn-8SCP0XOXTtm16YbihYVj69ZEqZwOHOxmtQXu1qClI6-bGdFK0a-yKf6s6OXG-m8renpa1wvmCjIFfECzhR9DzY98xyD0eUUyWA55TaMa5q5qdBDsch9R5kwMt_XWgmBtxu5lLA368ICr2oyM3INhu5BBCpb2U1tBTMWOGbnBh6eexcRfNF5nJCTEg0n-h_wZPh0Vx7jsHePADL3aL5DmUoY9WMR1gUk9ncQADxKcR1zOBXe-XSN-sEgZ25Q-tE1Elp27YNYkMUoN1g2qEbJDNGF3LHo-QHmWy2o9d5XJDnEOxyxj78fDyZvEOjr2BgdZ07ICG9vvPj6fRLr_DuwNg1YAUSm_XCCV9AF-7Jj7o_HPkI4nOUkW_32DSFTiNxpAFKU3NQukHO7WKtcuCXLYp3rquXN6YNHLXvwtvrn5PUrSPKs6Wt-giH2FjKjFM0qfNt9Zt9bkIeftHrPoKIdxlw4TW7LjIktxO09jk_KNO0-qnidWrr36eDtmlmNk1SVoFKcsk3X4_c_mTL7H9NwpZqUkicr0dFr1dItTn4B3KH_PovsN0BoqbHgo9YBfoejZpkHiVzGRNd7UCRlspy0
+
+@startuml
+actor Оператор as user
+boundary "Веб-интерфейс" as ui
+participant "Сервер" as server
+database "База данных" as db
+participant Устройство as device
+
+activate user
+user -> ui: Выбран пункт добавления устройства
+activate ui
+user <-- ui: Окно заполнения данных
+
+user -> ui: Данные об устройстве (оборудовании)
+
+ui -> server: Проверка на повторение устройства
+activate server
+
+server -> db: Запрос по устройству
+activate db
+db --> server: Ответ
+deactivate db
+
+alt Устройство уже добавлено
+
+  server --> ui: Отказ в добавлении
+  ui --> user: Сообщение об отказе
+
+else Устройство ещё не добавлено
+
+  server -> server: Сохранить устройство
+  server -> db: Сохранить конфигурацию устройства
+  activate db
+  db -> db: Сохранение конфигурации
+  db --> server: Конфигурация сохранена
+  db--
+
+  alt Устройство недоступно
+    server -> device: Соединение
+    ...Истечение длительности попытки подключения...
+    server --> ui: Ошибка соединения с устройством
+    ui --> user: Сообщение об ошибке
+  else Устройство доступно
+    server -> device: Соединение
+    activate device
+    device --> server: Ответ
+    device--
+
+    server --> ui: Добавление успешно
+    server--
+    ui --> user: Сообщение об успехе
+    ui--
+  end
+end
+user--
+@enduml
