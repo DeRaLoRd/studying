@@ -1,8 +1,8 @@
 @startuml
-actor Оператор as user
+actor Оператор as user 
 boundary "Веб-интерфейс" as ui
-participant "Сервер" as server
-database "База данных" as db
+control "Сервер" as server
+entity "База данных" as db
 
 user++
 user -> ui: Запрос на отчёт
@@ -23,9 +23,9 @@ server -> db: Логировать получение отчёта
 db --> server: Запись сохранена
 db--
 
-create participant Отчёт as report
-server -> report: Создать
-
+create entity Отчёт as report
+server -> report: Создать с указанием отчётного периода
+report --> server: Отчёт создан
 server --> ui: Отчёт в машиночитаемом виде
 ui --> user: Отчёт в человекочитаемом виде
 
