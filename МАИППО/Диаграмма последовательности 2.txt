@@ -17,6 +17,8 @@ loop Пока отчёт не составлен
   db++
   db --> server: Ответ на запрос
   server -> server: Формирование отчёта
+  server++
+  server--
 end loop
 
 server -> db: Логировать получение отчёта
@@ -25,17 +27,23 @@ db--
 
 create entity Отчёт as report
 server -> report: Создать с указанием отчётного периода
+report++
 report --> server: Отчёт создан
-server --> ui: Отчёт в машиночитаемом виде
-ui --> user: Отчёт в человекочитаемом виде
+report--
+server --> ui: Отчёт
+ui --> user: Отчёт 
 
 opt Экспорт отчёта
   user -> ui: Команда экспорта
   ui -> server: Команда экспорта
+  server -> report++: Обращение к отчёту
+  server <-- report--: Текст отчёта
   server -> server: Преобразование отчёта в нужный формат
+  server++
+  server--
   server --> ui: Файл отчёта
   server--
-  ui --> user: Отчёт в необходимом формате
+  ui --> user: Сообщение о завершении экспорта
   ui--
 end opt
 

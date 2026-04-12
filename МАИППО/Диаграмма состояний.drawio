@@ -235,8 +235,15 @@
         <mxCell id="qkr1gn6Ztgy7AJfNJvpC-94" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Режим ожидания" vertex="1">
           <mxGeometry height="60" width="120" x="1179" y="560" as="geometry" />
         </mxCell>
-        <mxCell id="EtLymxcji8k6tFkkiiRc-18" edge="1" parent="1" source="qkr1gn6Ztgy7AJfNJvpC-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="EtLymxcji8k6tFkkiiRc-17">
-          <mxGeometry relative="1" as="geometry" />
+        <mxCell id="EtLymxcji8k6tFkkiiRc-18" edge="1" parent="1" source="qkr1gn6Ztgy7AJfNJvpC-101" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;" target="OGQSm6tifLzPe_plenUD-1">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="1023" y="132" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OGQSm6tifLzPe_plenUD-2" connectable="0" parent="EtLymxcji8k6tFkkiiRc-18" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="[Отчёт сформирован]" vertex="1">
+          <mxGeometry relative="1" x="-0.4729" y="-2" as="geometry">
+            <mxPoint as="offset" />
+          </mxGeometry>
         </mxCell>
         <mxCell id="qkr1gn6Ztgy7AJfNJvpC-101" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Формирование отчёта" vertex="1">
           <mxGeometry height="60" width="120" x="794" y="-20" as="geometry" />
@@ -414,21 +421,27 @@
         <mxCell id="EtLymxcji8k6tFkkiiRc-3" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Мониторинг и работа с пользователем" vertex="1">
           <mxGeometry height="60" width="120" x="547" y="-36" as="geometry" />
         </mxCell>
-        <mxCell id="EtLymxcji8k6tFkkiiRc-16" edge="1" parent="1" source="EtLymxcji8k6tFkkiiRc-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="EtLymxcji8k6tFkkiiRc-17">
+        <mxCell id="EtLymxcji8k6tFkkiiRc-16" edge="1" parent="1" source="EtLymxcji8k6tFkkiiRc-6" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;" target="OGQSm6tifLzPe_plenUD-1">
           <mxGeometry relative="1" as="geometry">
-            <mxPoint x="810" y="128.16666666666674" as="targetPoint" />
+            <mxPoint x="736.000000000012" y="128" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="OGQSm6tifLzPe_plenUD-3" connectable="0" parent="EtLymxcji8k6tFkkiiRc-16" style="edgeLabel;html=1;align=center;verticalAlign=middle;resizable=0;points=[];" value="[Работа&lt;div&gt;завершена]&lt;/div&gt;" vertex="1">
+          <mxGeometry relative="1" x="-0.0757" y="1" as="geometry">
+            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="EtLymxcji8k6tFkkiiRc-6" parent="1" style="rounded=1;whiteSpace=wrap;html=1;" value="Работа с оборудованием" vertex="1">
           <mxGeometry height="60" width="120" x="547" y="98" as="geometry" />
         </mxCell>
-        <mxCell id="EtLymxcji8k6tFkkiiRc-19" edge="1" parent="1" source="EtLymxcji8k6tFkkiiRc-17" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0.5;exitY=0;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;" target="EtLymxcji8k6tFkkiiRc-3">
+        <mxCell id="EtLymxcji8k6tFkkiiRc-19" edge="1" parent="1" source="OGQSm6tifLzPe_plenUD-1" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;entryX=1;entryY=0.75;entryDx=0;entryDy=0;exitX=0.5;exitY=0;exitDx=0;exitDy=0;" target="EtLymxcji8k6tFkkiiRc-3">
           <mxGeometry relative="1" as="geometry">
+            <mxPoint x="776" y="58" as="sourcePoint" />
             <mxPoint x="795" y="12" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="EtLymxcji8k6tFkkiiRc-17" parent="1" style="ellipse;fillColor=strokeColor;html=1;" value="" vertex="1">
-          <mxGeometry height="15" width="14" x="736" y="120.5" as="geometry" />
+        <mxCell id="OGQSm6tifLzPe_plenUD-1" parent="1" style="rhombus;whiteSpace=wrap;html=1;" value="" vertex="1">
+          <mxGeometry height="36" width="37" x="757" y="110" as="geometry" />
         </mxCell>
       </root>
     </mxGraphModel>
